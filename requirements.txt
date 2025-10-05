@@ -1,0 +1,9 @@
+# Core dependencies
+tiktoken==0.8.0
+
+# Testing
+pytest==8.3.4
+
+# Code quality
+black==24.10.0
+flake8==7.1.1
