@@ -30,11 +30,7 @@ def count_tokens(text: str, model: str = "gpt-4") -> int:
     return len(encoding.encode(text))
 
 
-def calculate_cost(
-    model_key: str,
-    input_tokens: int,
-    output_tokens: int
-) -> dict:
+def calculate_cost(model_key: str, input_tokens: int, output_tokens: int) -> dict:
     """
     Calculate the cost for a given model and token counts.
 
@@ -88,33 +84,17 @@ def main():
         "--model",
         required=True,
         choices=list_available_models(),
-        help="AI model to calculate costs for"
+        help="AI model to calculate costs for",
+    )
+    parser.add_argument("--input-tokens", type=int, help="Number of input tokens")
+    parser.add_argument("--output-tokens", type=int, help="Number of output tokens")
+    parser.add_argument(
+        "--input-text", type=str, help="Text to count input tokens from"
     )
     parser.add_argument(
-        "--input-tokens",
-        type=int,
-        help="Number of input tokens"
+        "--output-text", type=str, help="Text to count output tokens from"
     )
-    parser.add_argument(
-        "--output-tokens",
-        type=int,
-        help="Number of output tokens"
-    )
-    parser.add_argument(
-        "--input-text",
-        type=str,
-        help="Text to count input tokens from"
-    )
-    parser.add_argument(
-        "--output-text",
-        type=str,
-        help="Text to count output tokens from"
-    )
-    parser.add_argument(
-        "--export",
-        type=str,
-        help="Export results to CSV file"
-    )
+    parser.add_argument("--export", type=str, help="Export results to CSV file")
 
     args = parser.parse_args()
 
