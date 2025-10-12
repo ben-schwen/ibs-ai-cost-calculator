@@ -1,6 +1,6 @@
 # AI Prompt Cost Calculator
 
-A simple Python tool to calculate and compare API costs for different Large Language Models (LLMs) like ChatGPT and Claude.
+A simple Python tool to calculate and compare API costs for different Large Language Models (LLMs) like ChatGPT and Claude
 
 ## Features
 
