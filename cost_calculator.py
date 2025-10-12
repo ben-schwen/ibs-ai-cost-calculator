@@ -35,7 +35,7 @@ def calculate_cost(model_key: str, input_tokens: int, output_tokens: int) -> dic
     Calculate the cost for a given model and token counts.
 
     Args:
-        model_key: Model identifier (e.g., 'gpt4', 'claude-sonnet')
+        model_key: Model identifier (e.g., 'gpt4', 'claude-sonnet', etc.)
         input_tokens: Number of input tokens
         output_tokens: Number of output tokens
 
