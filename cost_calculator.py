@@ -19,7 +19,7 @@ def count_tokens(text: str, model: str = "gpt-4") -> int:
         model: Model name for tokenizer (default: gpt-4)
 
     Returns:
-        Number of tokens in the text
+        Number of tokens in the text as integer
     """
     try:
         encoding = tiktoken.encoding_for_model(model)
